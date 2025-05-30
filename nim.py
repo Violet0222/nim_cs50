@@ -120,8 +120,7 @@ class NimAI():
         """
         new_est = reward + future_rewards
         updated_q = old_q + self.alpha * (new_est - old_q)
-        self.q[(tuple(state), action)] = updated_q
-        
+        self.q[(tuple(state), action)] = updated_q 
 
     def best_future_reward(self, state):
         """
@@ -178,7 +177,6 @@ class NimAI():
 
         return random.choice(best_actions)
     
-
 
 def train(n):
     """
